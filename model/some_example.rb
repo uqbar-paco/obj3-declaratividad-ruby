@@ -8,4 +8,8 @@ class SomeExample
 		@some_value + 5
 	end
 
+  def otra_cosa
+		9
+	end
+
 end
