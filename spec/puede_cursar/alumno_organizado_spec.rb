@@ -1,5 +1,6 @@
 require 'rspec'
 require_relative '../../model/facu_modelo_basico'
+require_relative '../../model/alumno'
 require_relative '../../model/puede_cursar/puede_cursar_organizado'
 
 require_relative '../../spec/spec_utils'

@@ -1,4 +1,5 @@
 require_relative "../model/facu_modelo_basico"
+require_relative '../../model/alumno'
 
 #"que hace" vs "que devuelve"
 class Alumno
