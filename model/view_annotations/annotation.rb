@@ -8,7 +8,7 @@ class Annotation
     @properties = []
   end
 
-  def addProperty(property)
+  def add_property(property)
     @properties << property
   end
 end
@@ -28,11 +28,11 @@ class AnnotationParser
     @text = text
   end
 
-  def annotationName
+  def annotation_name
     @text.split.first
   end
 
-  def annotationProperty
+  def annotation_property
     if (@text.split.size < 2)
       return nil
     end
@@ -40,9 +40,9 @@ class AnnotationParser
   end
 
   def parse
-    annotation = Annotation.new(annotationName)
-    if (!annotationProperty.nil?)
-      annotation.addProperty(annotationProperty)
+    annotation = Annotation.new(annotation_name)
+    if (!annotation_property.nil?)
+      annotation.add_property(annotation_property)
     end
     annotation
   end

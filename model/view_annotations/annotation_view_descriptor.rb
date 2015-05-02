@@ -7,17 +7,17 @@ class ViewDescriptorFromAnnotation
 
   def descriptor
     descriptor = ClassDescriptor.new(@klass)
-    viewAnnotations = @klass.annotations.select { |annot| annot.name == "viewProperty" }
-    propDescriptors = viewAnnotations.collect { |annot| self.propDescriptorFromAnnotation(annot) }
-    propDescriptors.each { |prop| descriptor.add_property(prop) }
+    view_annotations = @klass.annotations.select { |annot| annot.name == "viewProperty" }
+    prop_descriptors = view_annotations.collect { |annot| self.prop_descriptor_from_annotation(annot) }
+    prop_descriptors.each { |prop| descriptor.add_property(prop) }
     descriptor
   end
 
-  def propDescriptorFromAnnotation(annot)
+  def prop_descriptor_from_annotation(annot)
     descr = PropertyDescriptor.new(annot.selector)
-    labelProp = annot.properties.detect { |prop| prop.name == "label"}
-    if (!labelProp.nil?)
-      descr.label = labelProp.value
+    label_prop = annot.properties.detect { |prop| prop.name == "label"}
+    if (!label_prop.nil?)
+      descr.label = label_prop.value
     end
     descr
   end

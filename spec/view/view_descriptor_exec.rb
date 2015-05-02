@@ -29,7 +29,7 @@ DescriptorConsoleView.new(@juan, descriptor).console_show
 prop_basica = PropertyDescriptor.new(:es_basica?)
 prop_basica.label = 'Es una materia basica'
 
-descriptorMateria = ClassDescriptor.new(Materia, :nombre, prop_basica)
+descriptor_materia = ClassDescriptor.new(Materia, :nombre, prop_basica)
 
-DescriptorHtmlView.new(mat("Intro"), descriptorMateria).write_html("intro.html")
-DescriptorConsoleView.new(mat("Intro"), descriptorMateria).console_show
+DescriptorHtmlView.new(mat("Intro"), descriptor_materia).write_html("intro.html")
+DescriptorConsoleView.new(mat("Intro"), descriptor_materia).console_show

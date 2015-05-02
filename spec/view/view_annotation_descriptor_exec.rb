@@ -7,13 +7,13 @@ require_relative '../spec_utils'
 init_tpi
 init_juan
 
-descriptor = ViewDescriptorFromAnnotation.new(Alumno).descriptor
+descriptor_alumno = ViewDescriptorFromAnnotation.new(Alumno).descriptor
 
-DescriptorHtmlView.new(@juan, descriptor).write_html("juan.html")
-DescriptorConsoleView.new(@juan, descriptor).console_show
+DescriptorHtmlView.new(@juan, descriptor_alumno).write_html("juan.html")
+DescriptorConsoleView.new(@juan, descriptor_alumno).console_show
 
 
-descriptorMateria = ViewDescriptorFromAnnotation.new(Materia).descriptor
+descriptor_materia = ViewDescriptorFromAnnotation.new(Materia).descriptor
 
-DescriptorHtmlView.new(mat("Intro"), descriptorMateria).write_html("intro.html")
-DescriptorConsoleView.new(mat("Intro"), descriptorMateria).console_show
+DescriptorHtmlView.new(mat("Intro"), descriptor_materia).write_html("intro.html")
+DescriptorConsoleView.new(mat("Intro"), descriptor_materia).console_show

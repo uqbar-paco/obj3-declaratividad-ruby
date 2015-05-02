@@ -4,9 +4,9 @@ require_relative '../../model/view_annotations/annotation_view_descriptor'
 class DescriptorFromAnnotationView
   include BasicDescriptorView
 
-  def initialize(theModel)
-    @model = theModel
-    @descriptor = ViewDescriptorFromAnnotation.new(theModel.class).descriptor
+  def initialize(the_model)
+    @model = the_model
+    @descriptor = ViewDescriptorFromAnnotation.new(the_model.class).descriptor
   end
 
 end
