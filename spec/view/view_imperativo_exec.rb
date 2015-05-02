@@ -4,5 +4,5 @@ require_relative '../spec_utils'
 init_tpi
 init_juan
 
-AlumnoHtmlView.new(@juan).write_html("c:/temp/ruby/juan.html")
+AlumnoHtmlView.new(@juan).write_html("juan.html")
 AlumnoConsoleView.new(@juan).console_show

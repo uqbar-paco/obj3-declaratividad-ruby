@@ -22,5 +22,5 @@ descriptor = ClassDescriptor.new(
     prop_aprobo_intro
 )
 
-DescriptorHtmlView.new(@juan, descriptor).write_html("c:/temp/ruby/juan.html")
+DescriptorHtmlView.new(@juan, descriptor).write_html("juan.html")
 DescriptorConsoleView.new(@juan, descriptor).console_show

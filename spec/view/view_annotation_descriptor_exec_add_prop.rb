@@ -15,5 +15,5 @@ prop_aprobo_intro = BlockDescriptor.new(
 descriptor = ViewDescriptorFromAnnotation.new(Alumno).descriptor
 descriptor.add_property(prop_aprobo_intro)
 
-DescriptorHtmlView.new(@juan, descriptor).write_html("c:/temp/ruby/juan.html")
+DescriptorHtmlView.new(@juan, descriptor).write_html("juan.html")
 DescriptorConsoleView.new(@juan, descriptor).console_show

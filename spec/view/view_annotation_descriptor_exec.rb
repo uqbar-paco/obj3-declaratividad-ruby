@@ -9,5 +9,5 @@ init_juan
 
 descriptor = ViewDescriptorFromAnnotation.new(Alumno).descriptor
 
-DescriptorHtmlView.new(@juan, descriptor).write_html("c:/temp/ruby/juan.html")
+DescriptorHtmlView.new(@juan, descriptor).write_html("juan.html")
 DescriptorConsoleView.new(@juan, descriptor).console_show

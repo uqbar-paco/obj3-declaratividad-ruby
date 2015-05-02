@@ -10,5 +10,5 @@ fields = [
   :nombre,
   :cantidad_materias_aprobadas
 ]
-SimpleReflectionHtmlView.new(@juan, fields).write_html("c:/temp/ruby/juan.html")
+SimpleReflectionHtmlView.new(@juan, fields).write_html("juan.html")
 SimpleReflectionConsoleView.new(@juan, fields).console_show

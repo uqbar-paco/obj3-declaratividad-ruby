@@ -6,7 +6,7 @@ require_relative '../spec_utils'
 init_tpi
 init_juan
 
-DescriptorFromAnnotationHtmlView.new(@juan).write_html("c:/temp/ruby/juan.html")
+DescriptorFromAnnotationHtmlView.new(@juan).write_html("juan.html")
 DescriptorFromAnnotationConsoleView.new(@juan).console_show
 
 
@@ -22,7 +22,7 @@ prop_aprobo_intro = BlockDescriptor.new(
 
 html = DescriptorFromAnnotationHtmlView.new(@juan)
 html.descriptor.add_property(prop_aprobo_intro)
-html.write_html("c:/temp/ruby/juan.html")
+html.write_html("juan.html")
 
 console = DescriptorFromAnnotationConsoleView.new(@juan)
 console.descriptor.add_property(prop_aprobo_intro)
