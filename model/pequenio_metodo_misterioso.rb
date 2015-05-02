@@ -1,5 +1,5 @@
 require_relative "../model/facu_modelo_basico"
-require_relative '../../model/alumno'
+require_relative '../model/alumno'
 
 #"que hace" vs "que devuelve"
 class Alumno
@@ -7,7 +7,7 @@ class Alumno
     result = 0
     max = @cursadas.length - 1
     for i in (0..max)
-      if (@cursadas[i].materia.nombre == 'Intro') then
+      if @cursadas[i].materia.nombre == 'Intro'
         result = result + 1
       end
     end

@@ -1,8 +1,8 @@
 require_relative '../model/facu_modelo_basico'
 
 # utilitary stuff
-def mat(elNombre)
-  @tpi.detect { |m| m.nombre == elNombre}
+def mat(el_nombre)
+  @tpi.detect { |m| m.nombre == el_nombre}
 end
 
 def init_tpi

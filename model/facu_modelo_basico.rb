@@ -17,10 +17,10 @@ class Cursada
   attr_accessor :anio
   attr_accessor :nota
 
-  def initialize(laMat,elAnio,laNota)
-    @materia = laMat
-    @anio = elAnio
-    @nota = laNota
+  def initialize(la_mat,el_anio,la_nota)
+    @materia = la_mat
+    @anio = el_anio
+    @nota = la_nota
   end
 
   def esta_aprobada?
@@ -32,20 +32,20 @@ end
 class Materia
   extend AnnotatedClass
 
-  attr_accessor :esBasica
+  attr_accessor :es_basica
 
-  def initialize(elNombre,basica)
-    @nombre = elNombre
-    @esBasica = basica
+  def initialize(el_nombre,basica)
+    @nombre = el_nombre
+    @es_basica = basica
   end
 
-  annotation("viewProperty")
+  annotation("view_property")
   def nombre
     @nombre
   end
 
-  annotation("viewProperty label='Es una materia basica'")
+  annotation("view_property label='Es una materia basica'")
   def es_basica?
-    @esBasica
+    @es_basica
   end
 end

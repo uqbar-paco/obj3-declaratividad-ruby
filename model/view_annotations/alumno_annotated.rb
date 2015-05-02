@@ -8,16 +8,16 @@ class Alumno
     @inscripciones = []
   end
 
-  annotation("viewProperty")
+  annotation("view_property")
   def nombre
     @nombre
   end
 
-  def nombre=(elNombre)
-    @nombre = elNombre
+  def nombre=(el_nombre)
+    @nombre = el_nombre
   end
 
-  annotation("viewProperty")
+  annotation("view_property")
   def legajo
     @legajo
   end
@@ -34,7 +34,7 @@ class Alumno
     @inscripciones << mat
   end
 
-  annotation("viewProperty label='Cant. materias aprobadas'")
+  annotation("view_property label='Cant. materias aprobadas'")
   def cantidad_materias_aprobadas
     @cursadas.count { |c| c.nota >= 4 }
   end
