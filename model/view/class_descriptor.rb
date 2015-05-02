@@ -53,6 +53,10 @@ class ClassDescriptor
     @props = props.collect { |prop| prop.to_property_descriptor }
   end
 
+  def add_property(prop)
+    @props << prop
+  end
+
   def properties
     @props
   end
