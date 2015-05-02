@@ -1,3 +1,6 @@
+require_relative 'view_annotations/annotated_class'
+
+
 class Aplicacion
   def self.anio_actual
     2015
@@ -27,7 +30,8 @@ end
 
 
 class Materia
-  attr_accessor :nombre
+  extend AnnotatedClass
+
   attr_accessor :esBasica
 
   def initialize(elNombre,basica)
@@ -35,6 +39,12 @@ class Materia
     @esBasica = basica
   end
 
+  annotation("viewProperty")
+  def nombre
+    @nombre
+  end
+
+  annotation("viewProperty label='Es una materia basica'")
   def es_basica?
     @esBasica
   end

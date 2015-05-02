@@ -32,6 +32,7 @@ module BasicDescriptorConsoleView
     @descriptor.properties.each { |prop|
       puts "#{prop.label}: #{prop.value(@model)}"
     }
+    puts ""
   end
 
 end

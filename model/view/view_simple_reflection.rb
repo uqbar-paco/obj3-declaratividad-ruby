@@ -43,6 +43,7 @@ class SimpleReflectionConsoleView < SimpleReflectionView
     @fields.each { |field|
       puts "#{label(field)}: #{value(field)}"
     }
+    puts ""
   end
 
 end

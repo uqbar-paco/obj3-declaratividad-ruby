@@ -5,10 +5,14 @@ require_relative '../spec_utils'
 init_tpi
 init_juan
 
-fields = [
+fieldsJuan = [
   :legajo,
   :nombre,
   :cantidad_materias_aprobadas
 ]
-SimpleReflectionHtmlView.new(@juan, fields).write_html("juan.html")
-SimpleReflectionConsoleView.new(@juan, fields).console_show
+SimpleReflectionHtmlView.new(@juan, fieldsJuan).write_html("juan.html")
+SimpleReflectionConsoleView.new(@juan, fieldsJuan).console_show
+
+fieldsIntro = [ :nombre, :es_basica? ]
+SimpleReflectionHtmlView.new(mat("Intro"), fieldsIntro).write_html("intro.html")
+SimpleReflectionConsoleView.new(mat("Intro"), fieldsIntro).console_show
