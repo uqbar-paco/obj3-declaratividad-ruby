@@ -22,8 +22,8 @@ class Alumno
     @legajo
   end
 
-  def legajo=(elLegajo)
-    @legajo = elLegajo
+  def legajo=(el_legajo)
+    @legajo = el_legajo
   end
 
   def curso(materia,anio,nota)
