@@ -5,9 +5,9 @@ require_relative 'basic_view_descriptor'
 class DescriptorView
   include BasicDescriptorView
 
-  def initialize(theModel, theDescriptor)
-    @model = theModel
-    @descriptor = theDescriptor
+  def initialize(the_model, the_descriptor)
+    @model = the_model
+    @descriptor = the_descriptor
   end
 
 end
