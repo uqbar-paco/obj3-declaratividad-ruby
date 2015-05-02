@@ -4,7 +4,7 @@ require_relative 'HtmlView'
 
 module AlumnoView
   def initialize(el_alumno)
-    @alumno = elAlumno
+    @alumno = el_alumno
   end
 end
 
