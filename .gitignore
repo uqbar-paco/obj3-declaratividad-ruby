@@ -81,3 +81,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 
+
+spec/view/intro.html
+spec/view/juan.html
