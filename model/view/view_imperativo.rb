@@ -3,7 +3,7 @@ require_relative '../../model/alumno'
 require_relative 'HtmlView'
 
 module AlumnoView
-  def initialize(elAlumno)
+  def initialize(el_alumno)
     @alumno = elAlumno
   end
 end
