@@ -22,9 +22,9 @@ class RuleResult
   attr_reader :result
   attr_reader :messages
 
-  def initialize(theResult, theMessages)
-    @result = theResult
-    @messages = theMessages
+  def initialize(the_result, the_messages)
+    @result = the_result
+    @messages = the_messages
   end
 end
 
