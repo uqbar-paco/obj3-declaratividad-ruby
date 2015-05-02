@@ -4,3 +4,4 @@ ruby '2.2.1'
 
 gem 'rspec'
 gem 'rake'
+gem 'xml-simple'

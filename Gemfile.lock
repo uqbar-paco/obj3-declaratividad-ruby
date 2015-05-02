@@ -16,6 +16,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    xml-simple (1.1.5)
 
 PLATFORMS
   x64-mingw32
@@ -23,3 +24,4 @@ PLATFORMS
 DEPENDENCIES
   rake
   rspec
+  xml-simple

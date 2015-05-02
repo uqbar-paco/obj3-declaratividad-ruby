@@ -1,5 +1,0 @@
-<descriptor class="Alumno">
-  <viewProperty name="nombre"/>
-  <viewProperty name="legajo"/>
-  <viewProperty name="cantidad_materias_aprobadas" label="Cant. materias aprobadas"/>
-</descriptor>
