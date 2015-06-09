@@ -4,12 +4,17 @@ require_relative '../../model/view/view_descriptor'
 require_relative '../../model/view_annotations/annotation_view_descriptor'
 require_relative '../spec_utils'
 
+=begin
+Html and console view specified by the annotation in the annotated version of the
+Alumno class, where an additional property is added to the annotation-based descriptor.
+=end
+
 init_tpi
 init_juan
 
 prop_aprobo_intro = BlockDescriptor.new(
-    "Aprobo Intro",
-    Proc.new { |alu| alu.tiene_aprobada?(mat("Intro")) }
+  Proc.new { |alu| alu.tiene_aprobada?(mat("Intro"))} ,
+  "Aprobo Intro"
 )
 
 descriptor = ViewDescriptorFromAnnotation.new(Alumno).descriptor

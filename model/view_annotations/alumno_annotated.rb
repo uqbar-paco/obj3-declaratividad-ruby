@@ -8,6 +8,8 @@ class Alumno
     @inscripciones = []
   end
 
+  # por que no directamente
+  # view_property
   annotation("view_property")
   def nombre
     @nombre
@@ -35,6 +37,8 @@ class Alumno
   end
 
   annotation("view_property label='Cant. materias aprobadas'")
+  # annotation(:view_property, #{label: 'Cant. materias aprobadas'})
+  # view_property.label 'Cant. materias aprobadas'
   def cantidad_materias_aprobadas
     @cursadas.count { |c| c.nota >= 4 }
   end
@@ -45,6 +49,11 @@ class Alumno
 
   def esta_inscripto_en?(mat)
     @inscripciones.include?(mat)
+  end
+
+  annotation("view_property label='Aprobo Intro a la Programacion'")
+  def aprobo_intro
+    #...
   end
 end
 

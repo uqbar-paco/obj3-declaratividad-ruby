@@ -1,3 +1,7 @@
+=begin
+The behaviours needed to support AnnotatedClass, cfr. annotated_class.rb.
+=end
+
 class Annotation
   attr_accessor :name
   attr_reader :properties
@@ -13,6 +17,7 @@ class Annotation
   end
 end
 
+
 class AnnotationProperty
   attr_accessor :name
   attr_accessor :value
@@ -22,6 +27,7 @@ class AnnotationProperty
     @value = value
   end
 end
+
 
 class AnnotationParser
   def initialize(text)
@@ -47,6 +53,7 @@ class AnnotationParser
     annotation
   end
 end
+
 
 class AnnotationPropertyParser
   def initialize(str)

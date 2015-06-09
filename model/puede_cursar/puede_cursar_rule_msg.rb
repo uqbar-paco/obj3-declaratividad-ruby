@@ -10,6 +10,7 @@ class Alumno
         NoAproboMateriaCtx ,
         CincoBasicasParaCursarNoBasicaCtx
     ).value(PuedeCursarContext.new(self, mat))
+
   end
 end
 
@@ -37,11 +38,14 @@ class EsRegularCtx
   end
 end
 
+
+
+
 class NoInscriptoEnMateriaCtx
   def value(ctx)
     !ctx.alumno.esta_inscripto_en?(ctx.materia)
   end
-
++
   def msg(ctx)
     "El alumno #{ctx.alumno.nombre} ya esta inscripto en #{ctx.materia.nombre}."
   end

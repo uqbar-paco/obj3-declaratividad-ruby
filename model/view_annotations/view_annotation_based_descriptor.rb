@@ -1,6 +1,13 @@
 require_relative '../view/basic_view_descriptor'
 require_relative '../../model/view_annotations/annotation_view_descriptor'
 
+=begin
+Annotation-based console and HTML view.
+Notice that they only differ from DescriptorHtmlView / DescriptorConsoleView
+in the initialization.
+Cfr. view_descriptor.rb
+=end
+
 class DescriptorFromAnnotationView
   include BasicDescriptorView
 

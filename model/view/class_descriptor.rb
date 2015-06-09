@@ -1,16 +1,23 @@
 require_relative '../basic_additions'
 
+
+module DescriptorUtils
+  def label=(label)
+    @label = label
+    self
+  end
+end
+
+
 class PropertyDescriptor
+  include DescriptorUtils
+
   def initialize(field)
     @field = field
   end
 
   def label
     @label.if_nil(computed_label)
-  end
-
-  def label=(label)
-    @label = label
   end
 
   def computed_label
@@ -24,11 +31,13 @@ class PropertyDescriptor
   def to_property_descriptor
     self
   end
+
 end
 
-
 class BlockDescriptor
-  def initialize(label, block)
+  include DescriptorUtils
+
+  def initialize(block, label=nil)
     @label = label
     @block = block
   end
@@ -48,6 +57,8 @@ end
 
 
 class ClassDescriptor
+  include DescriptorUtils
+
   def initialize(klass, *props)
     @klass = klass
     @props = props.collect { |prop| prop.to_property_descriptor }
@@ -65,13 +76,14 @@ class ClassDescriptor
     @label.if_nil(computed_label)
   end
 
-  def label=(label)
-    @label = label
-  end
-
   def computed_label
     @klass.name.to_s.capitalize
   end
+
+  def to_class_descriptor
+    self
+  end
+
 end
 
 
@@ -81,5 +93,6 @@ class Symbol
     PropertyDescriptor.new(self)
   end
 end
+
 
 

@@ -3,6 +3,12 @@ require_relative '../../model/alumno_agregados'
 require_relative '../../model/view_annotations/view_annotation_based_descriptor'
 require_relative '../spec_utils'
 
+=begin
+Html and console view specified by the annotation in the annotated version of the
+Alumno class. In this case, the view knows how to obtain the description
+from the annotations.
+=end
+
 init_tpi
 init_juan
 

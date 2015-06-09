@@ -1,5 +1,10 @@
 require_relative 'annotation'
 
+=begin
+The ability of processing a very simple, String-based version of annotations.
+Cfr. alumno_annotated.rb.
+=end
+
 module AnnotatedClass
   attr_reader :annotations
 

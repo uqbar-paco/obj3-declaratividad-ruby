@@ -3,10 +3,16 @@ require_relative '../../model/view/view_descriptor'
 require_relative '../../model/view_xml/xml_view_descriptor'
 require_relative '../spec_utils'
 
+=begin
+Html and console views specified by a XML file. Cfr. xml_view_descriptor.rb and class_descriptor.rb.
+
+=end
+
 init_tpi
 init_juan
 
-filepath=File.expand_path('../../model/view_xml/alumno_descriptor.xml', File.dirname(__FILE__))
+filepath=File.expand_path('../../model/view_xml/alumno_descriptor.xml',
+                          File.dirname(__FILE__))
 xml_file=File.open filepath
 descriptor_alumno = ViewDescriptorFromXml.new(xml_file).descriptor
 

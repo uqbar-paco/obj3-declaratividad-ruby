@@ -32,3 +32,18 @@ class Alumno
     @cursadas.count { |c| c.materia.nombre == "Intro" }
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

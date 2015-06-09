@@ -1,6 +1,10 @@
 require_relative '../../model/view/view_imperativo'
 require_relative '../spec_utils'
 
+=begin
+Html and console views programmatically defined.
+=end
+
 init_tpi
 init_juan
 

@@ -1,10 +1,17 @@
 require_relative '../view/HtmlView'
 require_relative 'class_descriptor'
 
+=begin
+modules implementing the ability of building a console or HTML view of an object
+based on a descriptor.
+Cfr. class_descriptor.rb and view_descriptor.rb
+=end
+
 module BasicDescriptorView
   attr_accessor :model
   attr_accessor :descriptor
 end
+
 
 module BasicDescriptorHtmlView
   include BasicDescriptorView
@@ -14,7 +21,9 @@ module BasicDescriptorHtmlView
     result = "<html><body>\n<h1>#{@descriptor.label}</h1>\n"
     result = result + "<table>\n"
     @descriptor.properties.each { |prop|
-      result = result + "<tr><td style='padding-right:20px;'>#{prop.label}</td><td>#{prop.value(@model)}</td></tr>\n"
+      result = result + "<tr><td style='padding-right:20px;'>
+#{prop.label}</td><td>
+#{prop.value(@model)}</td></tr>\n"
     }
     result = result + "</table>\n"
     result = result + "</body></html>"

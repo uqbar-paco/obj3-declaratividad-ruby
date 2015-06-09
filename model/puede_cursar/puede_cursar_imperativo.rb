@@ -1,11 +1,8 @@
 class Alumno
 
   def puede_cursar?(mat)
-    if (self.esta_inscripto_en?(mat))
-      return false
-    end
-    cuantasAA = 0
-    cuantasBasicas = 0
+    return false if (self.esta_inscripto_en?(mat))
+    cuantasAA = 0 ; cuantasBasicas = 0
     max = @cursadas.length - 1
     for i in (0..max)
       if (@cursadas[i].nota >= 4)

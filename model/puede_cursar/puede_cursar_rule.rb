@@ -22,6 +22,10 @@ class ReglaAlumnoMateria
     @alumno = alu
     @materia = mat
   end
+
+  # esto es lo que hay que definir en cada subclase
+  def value
+  end
 end
 
 class EsRegular < ReglaAlumnoMateria

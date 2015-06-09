@@ -1,5 +1,9 @@
 require_relative 'HtmlView'
 
+=begin
+A view based on reflection, it is configured by a list of nullary selectors.
+=end
+
 class SimpleReflectionView
   def initialize(the_model, the_fields)
     @model = the_model
@@ -7,10 +11,10 @@ class SimpleReflectionView
   end
 
   def main_label
-    @model.class.to_s.capitalize
+    @model.class.to_s
   end
 
-  def label(field)
+  def label(field) # p.ej. :legajo
     field.to_s.capitalize
   end
 
@@ -19,6 +23,7 @@ class SimpleReflectionView
   end
 end
 
+
 class SimpleReflectionHtmlView < SimpleReflectionView
   include HtmlView
 
@@ -26,13 +31,19 @@ class SimpleReflectionHtmlView < SimpleReflectionView
     result = "<html><body>\n<h1>#{main_label}</h1>\n"
     result = result + "<table>\n"
     @fields.each { |field|
-      result = result + "<tr><td style='padding-right:20px;'>#{label(field)}</td><td>#{value(field)}</td></tr>\n"
+      result = result + "<tr><td style='padding-right:20px;'>
+#{self.label(field)}</td><td>
+#{self.value(field)}</td></tr>\n"
     }
     result = result + "</table>\n"
     result = result + "</body></html>"
   end
 
 end
+
+
+
+
 
 
 class SimpleReflectionConsoleView < SimpleReflectionView

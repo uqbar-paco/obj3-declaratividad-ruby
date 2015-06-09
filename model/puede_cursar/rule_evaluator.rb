@@ -9,7 +9,9 @@ class RuleEvaluator
 
   def value(ctx)
     failing_rules = rules.reject { |rule| rule.value(ctx) }
-    RuleResult.new(failing_rules.empty?, failing_rules.collect { |rule| rule.msg(ctx) } )
+    RuleResult.new(
+        failing_rules.empty?,
+        failing_rules.collect { |rule| rule.msg(ctx) } )
   end
 
   def report(ctx)

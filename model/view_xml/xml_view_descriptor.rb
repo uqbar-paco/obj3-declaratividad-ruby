@@ -1,6 +1,10 @@
 require 'xmlsimple'
 require_relative '../view/class_descriptor'
 
+=begin
+I know how to build a ClassDescriptor from a XML, whose source is given to me in my initialization.
+=end
+
 class ViewDescriptorFromXml
 
   attr_reader :xml_map
